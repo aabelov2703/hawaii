@@ -8,10 +8,13 @@ import {
 } from "@react-google-maps/api";
 import { useState } from "react";
 import { oahuHawaii } from "@/utils/helpers";
+import { MarkerOption } from "@/types/types";
 
 const Map = () => {
   const { toggleMap, markerOptions } = useAppContext();
-  const [selectedMarker, setSelectedMarker] = useState(null);
+  const [selectedMarker, setSelectedMarker] = useState<MarkerOption | null>(
+    null
+  );
   const [center, setCenter] = useState(oahuHawaii);
 
   const { isLoaded } = useJsApiLoader({
@@ -32,7 +35,9 @@ const Map = () => {
             height: "400px",
           }}
           center={
-            selectedMarker?.position?.lat ? selectedMarker.position : center
+            selectedMarker?.position?.lat
+              ? selectedMarker.position
+              : center ?? { lat: 0, lng: 0 }
           }
           zoom={11}
           onClick={() => setSelectedMarker(null)}

@@ -7,7 +7,7 @@ import { points } from "@/context/points";
 import Map from "./map";
 
 const Base = () => {
-  const [selected, setSeleted] = useState([]);
+  const [selected, setSeleted] = useState<string[]>([]);
   const [filtered, setFiltered] = useState(points);
 
   useEffect(() => {

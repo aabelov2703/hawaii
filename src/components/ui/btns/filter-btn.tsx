@@ -2,13 +2,10 @@ import { useAppContext } from "@/context/appContext";
 import Button from "../../global/button/button";
 
 const FilterBtn: React.FC = () => {
-  const { setToggleFilter } = useAppContext();
+  const { toggleFilter, setToggleFilter } = useAppContext();
 
   return (
-    <Button
-      label="Filter"
-      onClick={() => setToggleFilter((prev: boolean) => !prev)}
-    />
+    <Button label="Filter" onClick={() => setToggleFilter(!toggleFilter)} />
   );
 };
 

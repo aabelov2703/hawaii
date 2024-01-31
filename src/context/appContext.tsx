@@ -1,25 +1,9 @@
-import React, { createContext, useContext, ReactNode, useState } from "react";
-
-interface MarkerOption {
-  position: {
-    lat: number;
-    lng: number;
-  };
-  name: string;
-}
-
-interface AppContextProps {
-  toggleFilter: boolean;
-  setToggleFilter: (toggleFilter: boolean) => void;
-  toggleMap: boolean;
-  setToggleMap: (toggleMap: boolean) => void;
-  markerOptions: MarkerOption[];
-  setMarkerOptions: (markerOptions: MarkerOption[]) => void;
-}
-
-interface AppContextProviderProps {
-  children: ReactNode;
-}
+import {
+  AppContextProps,
+  AppContextProviderProps,
+  MarkerOption,
+} from "@/types/types";
+import React, { createContext, useContext, useState } from "react";
 
 const AppContext = createContext<AppContextProps | undefined>(undefined);
 

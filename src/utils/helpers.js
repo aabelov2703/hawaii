@@ -14,7 +14,6 @@ export const addMarker = (point, setMarkerOptions) => {
 };
 
 export const removeMarker = (point, markerOptions, setMarkerOptions) => {
-  console.log("del point", point, "from ", markerOptions);
   const newList = markerOptions.filter((maker) => maker.name !== point.name);
   console.log("newList", newList);
   setMarkerOptions(newList);

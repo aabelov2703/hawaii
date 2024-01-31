@@ -1,6 +1,7 @@
 "use client";
 import { useAppContext } from "@/context/appContext";
 import Card from "./card";
+import { Key } from "react";
 
 const Data = ({ data }: any) => {
   const { toggleMap } = useAppContext();
@@ -10,7 +11,7 @@ const Data = ({ data }: any) => {
         toggleMap ? "overflow-auto" : ""
       }`}
     >
-      {data.map((pts, idx) => (
+      {data.map((pts: any, idx: Key | null | undefined) => (
         <div key={idx}>
           <Card point={pts} />
         </div>

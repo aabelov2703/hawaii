@@ -5,13 +5,14 @@ import Button from "../global/button/button";
 const Filters = ({ options, setValues, values, info }: any) => {
   const { toggleFilter } = useAppContext();
 
-  const handleClick = (e) => {
-    const selected = e.target.textContent;
-    setValues((prev) => {
-      return prev.includes(e.target.textContent)
-        ? prev.filter((item) => item !== selected)
-        : [...prev, selected];
-    });
+  const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+    const selected = (e.target as HTMLButtonElement).textContent;
+    if (selected !== null)
+      setValues((prev: string[]) => {
+        return prev.includes(selected)
+          ? prev.filter((item) => item !== selected)
+          : [...prev, selected];
+      });
   };
 
   return (
