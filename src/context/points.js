@@ -154,7 +154,7 @@ export const points = [
     name: "Waimea Falls",
     coord: "21.633163920382074, -158.04390268066763",
     link: "https://www.google.com/maps/place/Waimea+Falls/@21.6363976,-158.0548336,3a,75y,90t/data=!3m8!1e2!3m6!1sAF1QipM9fdjyv-wouGUia7Foz2EwBGPBDpQ8ouv5uwYk!2e10!3e12!6shttps:%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipM9fdjyv-wouGUia7Foz2EwBGPBDpQ8ouv5uwYk%3Dw129-h86-k-no!7i9504!8i6336!4m15!1m7!3m6!1s0x7c0059a4792ee689:0x83a8f551f4112f42!2sBanzai+Pipeline!8m2!3d21.6643828!4d-158.0529971!16s%2Fg%2F11q97cyp7z!3m6!1s0x7c005a2bd0195591:0x4173614ea837d0d2!8m2!3d21.6306673!4d-158.0439574!10e5!16s%2Fg%2F11c6ltj9kx?entry=ttu",
-    img: `${imgPath}/Waimea_Falls.jpg`,
+    img: `${imgPath}/Waimea_Falls_renamed.jpg`,
     tag: "attraction",
   },
   {
