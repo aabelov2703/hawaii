@@ -3,7 +3,7 @@ import Container from "@/components/global/container";
 const Data = () => {
   return (
     <Container>
-      <p>Data</p>
+      <p>Mock page</p>
       {data.map((item, index) => (
         <div key={index}>{`${item}: item with ${index}`}</div>
       ))}

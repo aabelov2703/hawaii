@@ -21,7 +21,7 @@ const Filters = ({ options, setValues, values, info }: any) => {
         toggleFilter ? "max-h-[9999px] py-4" : "max-h-0 py-0"
       } overflow-hidden transition-max-h transform transition-all`}
     >
-      <div className={`flex justify-center bg-m-blue-1 p-4 `}>
+      <div className={`flex justify-center flex-wrap bg-m-blue-1 p-4 `}>
         {options.map((option: any, idx: number) => (
           <Button
             key={idx}

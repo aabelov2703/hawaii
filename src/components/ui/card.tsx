@@ -19,7 +19,7 @@ const Card = ({ point }: any) => {
       markerOptions.filter((maker) => maker.name === point.name).length === 0
     ) {
       // add marker
-      addMarker(point, setMarkerOptions); // add marker
+      addMarker(point, setMarkerOptions);
       setAdded(true);
     } else {
       // remove marker
@@ -38,12 +38,11 @@ const Card = ({ point }: any) => {
           <Button
             size="sm"
             type={!added ? "success" : "error"}
-            label={<span className="">{!added ? "+" : "-"}</span>}
+            label={<span className="h-[14px]">{!added ? "+" : "-"}</span>}
             onClick={addClick}
             style={{
-              width: "auto",
+              width: "20px",
               borderRadius: "100%",
-              padding: `${added ? 3 : 2}px`,
               fontSize: "24px",
             }}
           />
@@ -51,7 +50,7 @@ const Card = ({ point }: any) => {
       </div>
       <a href={point.link} target="_blank" className="block">
         <img
-          className="max-w-[256px] mobile:max-w-[400px] max-h-[240px] mx-auto rounded"
+          className="max-w-[256px] mobile:max-w-[378px] max-h-[240px] mx-auto rounded"
           src={point.img}
           alt={point.name}
           loading="lazy"

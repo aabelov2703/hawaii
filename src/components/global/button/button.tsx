@@ -1,6 +1,8 @@
-const Button = ({ label, onClick, style, size, type }: any) => {
+const Button = ({ label, onClick, style, size, type, children }: any) => {
   const sizeBtn =
-    size === "sm" ? "w-[40px] h-[20px] text-xs" : "px-2 py-1 text-sm";
+    size === "sm"
+      ? "max-w-[40px] h-[20px] text-xs"
+      : "px-2 py-1 text-sm min-w-[100px] m-1";
   const typeBtn =
     type === "success"
       ? "border-green-800 hover:border-green-600 bg-green-100 text-green-800 hover:text-green-600"
@@ -11,10 +13,11 @@ const Button = ({ label, onClick, style, size, type }: any) => {
   return (
     <button
       style={style}
-      className={`rounded border hover:text-blue-300 ${sizeBtn} ${typeBtn}`}
+      className={`flex justify-center items-center rounded border hover:text-blue-300 ${sizeBtn} ${typeBtn}`}
       onClick={onClick}
     >
       {label}
+      {children}
     </button>
   );
 };

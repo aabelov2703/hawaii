@@ -20,3 +20,5 @@ export const removeMarker = (point, markerOptions, setMarkerOptions) => {
 };
 
 export const oahuHawaii = { lat: 21.4311319, lng: -157.9412389 };
+
+export const imgPath = "/assets/img";
