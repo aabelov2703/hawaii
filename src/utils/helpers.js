@@ -5,6 +5,7 @@ export const addMarker = (point, setMarkerOptions) => {
       const newMarker = {
         position: { lat: coord[0], lng: coord[1] },
         name: point.name,
+        tag: point.tag,
       };
       return [...prev, newMarker];
     } else {

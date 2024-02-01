@@ -1,18 +1,21 @@
-"use client";
 import { useAppContext } from "@/context/appContext";
 import Button from "../global/button/button";
+import { MarkerOption } from "@/types/types";
 
 const Filters = ({ options, setValues, values, info }: any) => {
-  const { toggleFilter } = useAppContext();
+  const { toggleFilter, markerOptions, setMarkerOptions } = useAppContext();
 
   const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     const selected = (e.target as HTMLButtonElement).textContent;
-    if (selected !== null)
+    if (selected !== null) {
       setValues((prev: string[]) => {
         return prev.includes(selected)
           ? prev.filter((item) => item !== selected)
           : [...prev, selected];
       });
+      const newMarkers = markerOptions.filter((m) => m.tag === selected);
+      setMarkerOptions(newMarkers);
+    }
   };
 
   return (

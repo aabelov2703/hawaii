@@ -7,7 +7,7 @@ const Data = ({ data }: any) => {
   const { toggleMap } = useAppContext();
   return (
     <div
-      className={`flex flex-wrap justify-center gap-x-6 gap-y-4 my-4 z-10 ${
+      className={`flex flex-wrap justify-center gap-0 gap-y-1 mobile:gap-2 sm:gap-x-6 sm:gap-y-4 my-4 ${
         toggleMap ? "overflow-auto" : ""
       }`}
     >

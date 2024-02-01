@@ -6,6 +6,7 @@ export interface MarkerOption {
     lng: number;
   };
   name: string;
+  tag: string;
 }
 
 export interface AppContextProps {
